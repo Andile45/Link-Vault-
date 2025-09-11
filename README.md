@@ -49,47 +49,52 @@ src/
 
 🎯 Usage
 Adding a Link
-1.
-Click the "Add New Link" button
-2.
-Fill in the title, URL, description, and tags
-3.
-Click "Save Link" to add it to your vault
+1.Click the "Add New Link" button
+
+2.Fill in the title, URL, description, and tags
+
+3.Click "Save Link" to add it to your vault
 Searching Links
+
 Use the search bar to find links by title, description, or tags
 Search results update in real-time as you type
 Managing Links
+
 Edit: Click the edit icon on any link card
 Delete: Click the delete icon to remove a link
 Visit: Click anywhere on the link card to open the URL
+
 🎨 Design Features
 Glass Morphism: Modern frosted glass effect with backdrop blur
 Responsive Grid: Adaptive layout that adjusts to screen size
 Smooth Animations: Hover effects and transitions for better UX
 Dark Theme: Beautiful background with semi-transparent overlays
 Typography: Clean, readable fonts with proper hierarchy
+
 🔧 Technologies Used
 React 19.1.1 - UI library
 TypeScript 5.8.3 - Type safety
 Vite 7.1.2 - Build tool and dev server
 CSS3 - Styling with modern features
 Local Storage API - Data persistence
+
 📱 Browser Support
 Chrome (recommended)
 Firefox
 Safari
 Edge
+
 🤝 Contributing
-1.
-Fork the repository
-2.
-Create a feature branch (git checkout -b feature/amazing-feature)
-3.
-Commit your changes (git commit -m 'Add amazing feature')
-4.
-Push to the branch (git push origin feature/amazing-feature)
-5.
-Open a Pull Request
+1.Fork the repository
+
+2.Create a feature branch (git checkout -b feature/amazing-feature)
+
+3.Commit your changes (git commit -m 'Add amazing feature')
+
+4.Push to the branch (git push origin feature/amazing-feature)
+
+5.Open a Pull Request
+
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
