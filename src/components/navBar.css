@@ -1,23 +1,24 @@
 .navbar {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   z-index: 100;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .navbar-container {
-  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
 }
 
 .navbar-brand {
@@ -25,25 +26,25 @@
   align-items: center;
   gap: 0.75rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
 }
 
 .navbar-brand:hover {
-  transform: scale(1.02);
+  opacity: 0.8;
 }
 
 .navbar-logo {
-  height: 40px;
+  height: 36px;
   width: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-sm);
 }
 
 .brand-text {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1f2937;
-  text-decoration: none;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
 }
 
 .navbar-info {
@@ -53,22 +54,21 @@
 
 .tagline {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: var(--color-text-secondary);
   font-weight: 500;
-  font-style: italic;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar-container {
-    padding: 0.875rem 1rem;
+    padding: 0.875rem 1.25rem;
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
   }
   
   .navbar-logo {
-    height: 35px;
+    height: 32px;
   }
   
   .brand-text {
@@ -82,11 +82,11 @@
 
 @media (max-width: 480px) {
   .navbar-container {
-    padding: 0.75rem 0.75rem;
+    padding: 0.75rem 1rem;
   }
   
   .navbar-logo {
-    height: 32px;
+    height: 28px;
   }
   
   .brand-text {
@@ -96,27 +96,4 @@
   .tagline {
     font-size: 0.75rem;
   }
-}
-
-/* Focus state for accessibility */
-.navbar-brand:focus {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-  border-radius: 8px;
-}
-
-/* Animation for smooth entrance */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.navbar {
-  animation: slideDown 0.5s ease-out;
 }

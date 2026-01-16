@@ -185,7 +185,12 @@ export const LinkVault: React.FC = () => {
       <div className="link-vault-header">
         <div className="header-content">
           <h1 className="vault-title">
-            <span className="vault-icon">🔗</span>
+            <span className="vault-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+              </svg>
+            </span>
             Link Vault
           </h1>
           <p className="vault-subtitle">
@@ -216,7 +221,12 @@ export const LinkVault: React.FC = () => {
           <div className="empty-state">
             {links.length === 0 ? (
               <>
-                <div className="empty-icon">📚</div>
+                <div className="empty-icon">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                  </svg>
+                </div>
                 <h3>No links saved yet</h3>
                 <p>Start building your link collection by adding your first bookmark!</p>
                 <button className="empty-action-btn" onClick={openAddForm}>
@@ -225,7 +235,12 @@ export const LinkVault: React.FC = () => {
               </>
             ) : (
               <>
-                <div className="empty-icon">🔍</div>
+                <div className="empty-icon">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.35-4.35" />
+                  </svg>
+                </div>
                 <h3>No links found</h3>
                 <p>Try adjusting your search terms or filters to find what you're looking for.</p>
               </>

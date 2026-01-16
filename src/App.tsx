@@ -5,10 +5,12 @@ import { LinkVault } from './components/LinkVault'
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <NavBar/>
-      <LinkVault />
-    </>
+      <main className="app-main">
+        <LinkVault />
+      </main>
+    </div>
   )
 }
 
