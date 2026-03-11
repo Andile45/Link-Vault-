@@ -1,106 +1,143 @@
-# 🔗 Link Vault
+# Link Vault
+
 A modern, elegant bookmark manager built with React and TypeScript. Save, organize, and access your favorite links with a beautiful glass morphism UI design.
 
-## ✨ Features
-- 🎨 Modern UI Design : Beautiful glass morphism interface with backdrop blur effects
-- 📱 Responsive Layout : Fully responsive design that works on all devices
-- 🔍 Smart Search : Real-time search functionality across all your links
-- 🏷️ Tag System : Organize links with custom tags for easy categorization
-- 💾 Local Storage : All data is stored locally in your browser
-- ⚡ Fast Performance : Built with Vite for lightning-fast development and builds
-- 🎯 Easy Management : Add, edit, and delete links with intuitive forms
-- 🌟 Visual Feedback : Smooth animations and hover effects
-- 📋 Link Preview : See domain and description for each saved link
-## 🚀 Getting Started
+## Features
+
+- **Modern UI** — Glass morphism interface with backdrop blur effects
+- **Responsive** — Works on all screen sizes
+- **Smart Search** — Debounced search across title, URL, description, and tags
+- **Tags** — Organize links with comma-separated tags
+- **Local Storage** — All data stored in your browser (no backend)
+- **Fast** — Built with Vite for quick dev and builds
+- **CRUD** — Add, edit, and delete links with validation
+- **Feedback** — Toast notifications and smooth animations
+- **Link Preview** — Domain and description on each card
+
+## Getting Started
+
 ### Prerequisites
-- Node.js (version 16 or higher)
-- npm or yarn package manager
+
+- Node.js (v16 or higher)
+- npm or yarn
 
 ### Installation
-1. Clone the repository
-git clone https://github.com/yourusername/link-vault.git
-cd link-vault
-2.Install dependencies
- npm install
-3. npm install
-npm run dev
 
-1. 4.
-   Open your browser Navigate to http://localhost:5173 to see the application
-## 🛠️ Available Scripts
-- npm run dev - Start development server
-- npm run build - Build for production
-- npm run preview - Preview production build
-- npm run lint - Run ESLint for code quality
-## 🏗️ Project Structure
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/link-vault.git
+   cd link-vault
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the dev server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Available Scripts
+
+| Command           | Description                |
+| ----------------- | -------------------------- |
+| `npm run dev`     | Start development server   |
+| `npm run build`   | Build for production       |
+| `npm run preview` | Preview production build   |
+| `npm run lint`    | Run ESLint                 |
+
+## Project Structure
+
+```
 src/
-├── components/          # React components
-│   ├── LinkCard.tsx    # Individual link display
-│   ├── LinkForm.tsx    # Add/edit link form
-│   ├── LinkVault.tsx   # Main container component
-│   ├── NavBar.tsx      # Navigation header
-│   ├── SearchBar.tsx   # Search functionality
-│   └── Notification.tsx # Toast notifications
-├── assets/             # Static assets
-├── utils/              # Utility functions
-│   └── localStorage.ts # Local storage management
-├── types.ts           # TypeScript type definitions
-└── App.tsx           # Root component
+├── components/
+│   ├── LinkCard.tsx      # Link card (title, domain, description, tags)
+│   ├── LinkCard.css
+│   ├── LinkForm.tsx      # Add/edit link modal form
+│   ├── LinkForm.css
+│   ├── LinkVault.tsx     # Main vault (state, search, CRUD)
+│   ├── LinkVault.css
+│   ├── navBar.tsx        # Top navigation with logo
+│   ├── navBar.css
+│   ├── SearchBar.tsx     # Search input with debounce
+│   ├── SearchBar.css
+│   ├── Notification.tsx  # Toast notifications
+│   └── Notification.css
+├── utils/
+│   └── localStorage.ts   # CRUD + search for links
+├── assets/               # Images (e.g. Logo.png)
+├── types.ts              # Shared TypeScript types
+├── App.tsx               # Root layout (NavBar + LinkVault)
+├── App.css
+├── main.tsx              # Entry point
+└── index.css             # Global styles
+```
 
-🎯 Usage
-Adding a Link
-1.Click the "Add New Link" button
+## Usage
 
-2.Fill in the title, URL, description, and tags
+### Adding a link
 
-3.Click "Save Link" to add it to your vault
-Searching Links
+1. Click **Add New Link**.
+2. Enter title, URL, description, and optional tags (comma-separated).
+3. Click **Add Link** (URL gets `https://` added if missing).
 
-Use the search bar to find links by title, description, or tags
-Search results update in real-time as you type
-Managing Links
+### Searching
 
-Edit: Click the edit icon on any link card
-Delete: Click the delete icon to remove a link
-Visit: Click anywhere on the link card to open the URL
+- Type in the search bar; results update after a short delay (debounced).
+- Search runs over title, URL, description, and tags.
+- Clear the field to see all links again.
 
-🎨 Design Features
-Glass Morphism: Modern frosted glass effect with backdrop blur
-Responsive Grid: Adaptive layout that adjusts to screen size
-Smooth Animations: Hover effects and transitions for better UX
-Dark Theme: Beautiful background with semi-transparent overlays
-Typography: Clean, readable fonts with proper hierarchy
+### Managing links
 
-🔧 Technologies Used
-React 19.1.1 - UI library
-TypeScript 5.8.3 - Type safety
-Vite 7.1.2 - Build tool and dev server
-CSS3 - Styling with modern features
-Local Storage API - Data persistence
+- **Visit** — Click the card to open the URL in a new tab.
+- **Edit** — Click the edit icon, change fields, then **Update Link**.
+- **Delete** — Click the delete icon and confirm.
 
-📱 Browser Support
-Chrome (recommended)
-Firefox
-Safari
-Edge
+## Design
 
-🤝 Contributing
-1.Fork the repository
+- **Glass morphism** — Frosted panels with backdrop blur
+- **Responsive grid** — Card layout adapts to screen size
+- **Animations** — Hover and transition effects
+- **Dark theme** — Dark background with semi-transparent surfaces
+- **Typography** — Clear hierarchy and readability
 
-2.Create a feature branch (git checkout -b feature/amazing-feature)
+## Tech Stack
 
-3.Commit your changes (git commit -m 'Add amazing feature')
+- **React** 19.1.1
+- **TypeScript** 5.8.3
+- **Vite** 7.1.2
+- **CSS3** (no UI framework)
+- **Local Storage API** for persistence
 
-4.Push to the branch (git push origin feature/amazing-feature)
+## Browser Support
 
-5.Open a Pull Request
+Chrome, Firefox, Safari, Edge (modern versions).
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Contributing
 
-🙏 Acknowledgments
-Built with React and TypeScript
-Powered by Vite for fast development
-Inspired by modern web design trends
+1. Fork the repo.
+2. Create a branch: `git checkout -b feature/your-feature`
+3. Commit: `git commit -m 'Add your feature'`
+4. Push: `git push origin feature/your-feature`
+5. Open a Pull Request.
 
-Made with ❤️ by Andile Manganye 
+## License
+
+MIT — see the LICENSE file for details.
+
+## Acknowledgments
+
+- React and TypeScript
+- Vite for fast tooling
+- Modern web design trends
+
+---
+
+Made with love by Andile Manganye
